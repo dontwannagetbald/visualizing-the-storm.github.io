@@ -2,7 +2,7 @@
 // prompt, url and secretKey are placeholders and should be replaced with real values
 
 const OPENAI_URL = 'https://api.chatanywhere.tech/v1/chat/completions';
-const OPENAI_KEY = 'sk-8F2bpQVAV8sCoPSuOW2P6ZAXYYHk7xsispnjTIrSmxHWP1Fk';
+const OPENAI_KEY = '';
 
 /**
  * Send a text prompt to OpenAI and return the parsed response.
