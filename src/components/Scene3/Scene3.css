@@ -1,0 +1,23 @@
+.bg {
+  width: 100%;
+  height: auto;        /* 高度按原图比例自动算 */
+  display: block;      /* 去掉 img 底部的神秘空隙 */
+}
+.svg-wrapper {
+  position: relative;
+}
+.noise {
+  position: absolute;
+  inset: 0;
+  pointer-events: none;
+
+  background:
+    repeating-radial-gradient(#000 0 0.0001%, #fff 0 0.0002%)
+      60% 60% / 3000px 3000px,
+    repeating-conic-gradient(#000 0 0.0001%, #fff 0 0.0002%)
+      40% 40% / 3000px 3000px;
+
+  background-blend-mode: difference;
+  opacity: 0.12; /* 核心参数，0.05–0.2 之间调 */
+  mix-blend-mode: overlay; /* 可换 soft-light / overlay */
+}

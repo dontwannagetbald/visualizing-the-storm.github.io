@@ -1,0 +1,110 @@
+.image-stack {
+  position: relative;
+  width: 100%;
+  height: 100%; /* 你可以改成你需要的高度 */
+}
+
+.stacked-image {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 100%;
+  height: auto;
+  transform: translate(-50%, -50%);
+  object-fit: cover;
+}
+
+.textArea {
+  width: 24%;                 /* 固定宽度 */
+  position: absolute;
+  bottom: 75px;
+  left: 48%;
+  transform: translateX(-50%);
+  display: flex;
+  flex-direction: column;     /* 垂直排列 span，使换行自然发生 */
+  align-items: flex-start;    /* 左对齐 */
+  gap: 10px;                  /* span 间距 */
+  padding: 10px 15px;
+  border-radius: 8px;
+  z-index: 10;
+}
+
+.textArea span {
+  display: block;             /* 每个 span 独占一行 */
+}
+
+/* 第一个 span 样式 */
+.textArea span:first-child {
+  font-size: 1.2rem;
+  font-family: "点点像素体-方形" !important;
+  font-weight: normal !important;
+  color: #D4F3FF;
+  -webkit-text-stroke: 0.5px #D4F3FF;
+  text-shadow: 0 0 6px #D4F3FF, 0 0 10px #A0EFFF;
+}
+
+/* 第二个 span 样式，可以设置不同字体 */
+.textArea span:last-child {
+  font-size: 1rem;
+  font-family: "Arial", sans-serif;
+  font-weight: normal;
+  color: #D4F3FF;
+  text-shadow: 0 0 3px #D4F3FF, 0 0 6px #A0EFFF;
+}
+
+
+.overlay {
+  position: absolute;
+  top: 81.5%;
+  left: 80%;
+  transform: translateX(-50%);
+  display: flex;
+  flex-direction: row;
+  gap: 2.3rem;
+  padding: 10px 15px;
+  border-radius: 8px;
+  z-index: 10;
+  background-image: url('../../../src/assets/line.png');
+  background-repeat: no-repeat;       /* 不重复 */
+  background-position: center;        /* 背景图在正中间 */
+  background-size: auto;              /* 保持原始大小 */
+  background-position: center 23px;  
+}
+
+.icon-wrapper {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  cursor: pointer;
+  user-select: none;
+  transition: filter 0.3s ease, transform 0.3s ease;
+  filter: grayscale(100%) brightness(50%);
+  position: relative; /* 为背景定位提供参考 */
+}
+
+.icon-wrapper.active {
+  filter: none;           /* 彩色 */
+  transform: scale(1.5);  /* 放大 20% */
+}
+
+.button-icon {
+  width: 35px;
+  height: 35px;
+  object-fit: contain;
+  margin-bottom: 4px;
+}
+
+.button-text {
+  font-size: 12px;
+  text-align: center;
+  color: #D4F3FF;
+  font-family: "点点像素体-方形" !important;
+  font-weight: normal !important;
+  text-shadow:
+
+    /* 发光（外层） */
+    0 0 5px  #D4F3FF,
+    0 0 10px #A0EFFF;
+  white-space: nowrap; /* 禁止换行 */
+
+}

@@ -1,0 +1,140 @@
+.pinkgirl-layer {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 1;
+}
+
+/* ===== 固定不动区域 ===== */
+.pinkgirl-fixed {
+  position: sticky;
+  top: 50%;
+  transform: translateY(-50%);
+  height: 0; /* 不占滚动高度 */
+  pointer-events: none;
+}
+
+.pinkgirl-arrow {
+  position: absolute;    /* 脱离 flex 布局 */
+  left: 9%;               /* 电视最左边 */
+  top: 50%;
+  transform: translateY(-50%);
+  height: 20%;           /* 视素材比例调整 */
+  pointer-events: none;  /* 防止挡交互 */
+}
+.pinkgirl-arrow {
+  position: absolute;    /* 脱离 flex 布局 */
+  left: 9%;               /* 电视最左边 */
+  top: 50%;
+  transform: translateY(-50%);
+  height: 20%;           /* 视素材比例调整 */
+  pointer-events: none;  /* 防止挡交互 */
+}
+
+/* 电视机整体 */
+.pinkgirl-tv {
+  position: relative;   /* ⭐ 必须 */
+  width: 90%;
+  height: 87%;
+
+  /* background-image: url('../../../src/assets/tv.webp'); */
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: center;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+
+.pinkgirl-content {
+  position: absolute;   /* ⭐ 脱离电视背景 */
+  inset: 0;             /* 覆盖整个电视区域 */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  pointer-events: none; /* 可选：防止挡住滚动/交互 */
+}
+
+
+/* 电视机外框 */
+.tv-frame {
+  width: 100%;
+  display: block;
+}
+
+/* 屏幕里的 pinkgirl */
+.pinkgirl {
+  height: auto;
+}
+
+/* ===== 滚动文字区域 ===== */
+.pinkgirl-scroll-text {
+  margin-top: 120vh;   /* 控制文字何时开始出现 */
+  padding-bottom: 200vh;
+  display: flex;
+  flex-direction: column;
+  gap: 40vh;
+}
+
+.text-block {
+  width: 100%;
+  text-align: center;
+  font-size: 1.4rem;
+  line-height: 1.8;
+  color: white;
+  opacity: 0.9;
+}
+
+
+
+
+.pinkgirl-layer {
+  position: relative;
+  width: 100%;
+  height: 100%;
+}
+
+.pinkgirl-tv {
+  position: relative;
+  z-index: 1;
+}
+
+.pinkgirl-card {
+  position: absolute;
+  top: 90%;
+  left: 50%;
+  width: 52%;
+  height: auto;
+  background: #030E27;
+  transform: translate(-50%, -50%);
+  transition: opacity 0.3s ease;
+  z-index: 2;
+
+  color: #D4F3FF;
+  font-family: "点点像素体-方形" !important;
+  font-size: 1.1rem;
+  font-weight: normal !important;
+  color: #D4F3FF;
+  -webkit-text-stroke: 1px #D4F3FF;
+
+  text-shadow:
+
+    /* 发光（外层） */
+    0 0 3px  #D4F3FF,
+    0 0 12px #A0EFFF;
+
+
+}
+
+@keyframes blinking {
+  0%, 50%, 100% { opacity: 1; }
+  20%, 75% { opacity: 0; }
+}
+@keyframes fadeIn {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}

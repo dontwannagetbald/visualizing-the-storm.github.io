@@ -1,0 +1,108 @@
+.scene.scene2 {
+  position: relative;
+  min-height: 200vh;
+}
+
+.animation, .animation_layer {
+	height: 1000px;
+}
+
+.animation {
+  display: block;
+	position: relative;
+	z-index: 10;
+}
+.animation_layer {
+	background-position: bottom center;
+	background-size: auto 1038px;
+	background-repeat: repeat-x;
+	width: 100%;
+	position: absolute;
+}
+.animation_layer.parallax {
+	position: fixed;
+}
+
+/* 背景 */
+.part1-bg {
+  width: 100% ;
+  display: block; 
+}
+
+#building {
+  background-image: url('../../../src/assets/part1_bg.webp');
+  background-size: cover;    /* 铺满 */
+  background-position: center;
+  width: 100%;
+  height: auto;             /* 或你想要的高度 */
+}
+
+/* 漂浮层 */
+.part1_layer1 {
+  position: absolute;
+  /* top: 30%; */
+  left: 50%;
+  transform: translateX(-50%);
+  width: 100%;
+  z-index: 2;
+  pointer-events: none;
+  will-change: transform;
+}
+
+.text {
+  color: #D4F3FF;
+  font-family: "点点像素体-方形" !important;
+  font-size: 1.5rem;
+  font-weight: normal !important;
+  color: #D4F3FF;
+  -webkit-text-stroke: 1px #D4F3FF;
+
+  text-shadow:
+
+    /* 发光（外层） */
+    0 0 3px  #D4F3FF,
+    0 0 12px #A0EFFF;
+}
+
+.text-bg {
+  position: relative;
+  display: inline-block;
+  padding: 1.2em 9.8em; /* 控制黑底高度 & 左右留白 */
+}
+
+.text-bg::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background: #030E27;
+  border-radius: 6px;      /* 可要可不要 */
+  z-index: -1;             /* 在文字下面 */
+}
+
+.blink {
+  animation: blink 2s 5;
+}
+
+@keyframes blink {
+  0%, 50%, 100% { opacity: 1; }
+  25%, 75% { opacity: 0; }
+}
+
+.sentiment-item span{
+  color:#BFD8FF;
+  font-size:14px;
+}
+
+.sentiment-item.active span{
+  color:#D4F3FF;
+  font-weight:bold;
+}
+
+.sentiment-icons{
+  position:absolute;
+  bottom:65%;
+  left:95%;
+  transform:translateX(-50%);
+  display:flex;
+  gap:20px;
+}
