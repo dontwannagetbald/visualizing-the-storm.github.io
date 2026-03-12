@@ -12,6 +12,7 @@ import part1Layer3Bg from '../../../src/assets/part1_layer3.webp';
 import part1Layer4Bg from '../../../src/assets/part1_layer4.webp';
 import word1 from '../../../src/assets/word1.png';
 import word2 from '../../../src/assets/word2.png';
+import word from '../../../src/assets/part1_word.webm';
 import part1Bg from '../../../src/assets/part1_bg.png';
 import pic021 from '../../../src/assets/021.png';
 import Ellipses from '../../../src/assets/Ellipses Horizontal.png';
@@ -410,7 +411,7 @@ function Scene2({parallaxRef}) {
         </div>
 
         <video
-            src="../../../src/assets/part1_word.webm"
+            src={word}
             loop
             muted
             playsInline
