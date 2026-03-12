@@ -2,6 +2,7 @@ import TextType from '../TextType/TextType';
 import './Scene1.css';
 import DecryptedText from '../DecryptedText/DecryptedText';
 import { useState, useEffect } from "react";
+import cover from "../../assets/cover.mp4";
 
 function Scene1() {
   const [showDecrypted, setShowDecrypted] = useState(false);
@@ -22,7 +23,7 @@ function Scene1() {
     <section className="scene scene1">
       <video
         className="bg back"
-        src="../../../src/assets/cover.mp4"
+        src={cover}
         autoPlay
         loop
         muted

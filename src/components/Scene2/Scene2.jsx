@@ -32,7 +32,7 @@ import part1ending from '../../../src/assets/part1_ending.png';
 import part2BgTop from '../../../src/assets/part2_bg_top.webp';
 import part2BgBottom from '../../../src/assets/part2_bg_bottom.webp';
 import EmotionPopup from '../EmotionPopup/EmotionPopup';
-
+import gamevideo from '../../../src/assets/gamevideo.mp4';
 function Scene2({parallaxRef}) {
   const [showTopPopup, setShowTopPopup] = useState(false);
   const [showRightPopup, setShowRightPopup] = useState(false);
@@ -305,7 +305,8 @@ function Scene2({parallaxRef}) {
               {Array.from({ length: 4 }).map((_, i) => (
                 <video
                   key={i}
-                  src="../../../src/assets/gamevideo.mp4"
+                  src={gamevideo}
+
                   loop
                   muted
                   playsInline
