@@ -35,7 +35,7 @@ import EmotionPopup from '../EmotionPopup/EmotionPopup';
 
 function Scene2({parallaxRef}) {
   const [showTopPopup, setShowTopPopup] = useState(false);
-  const [showRightPopup, setShowRightPopup] = useState(true);
+  const [showRightPopup, setShowRightPopup] = useState(false);
   const [step, setStep] = useState(0); 
   const [flashVisible, setFlashVisible] = useState(true);
   const [comment, setComment] = useState(''); // current input value
@@ -409,7 +409,7 @@ function Scene2({parallaxRef}) {
         </div>
 
         <video
-            src="../../../src/assets/part1_words.webm"
+            src="../../../src/assets/part1_word.webm"
             loop
             muted
             playsInline

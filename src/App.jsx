@@ -218,7 +218,7 @@ This process can evolve into online violence and may also turn bystanders into p
 
         <ParallaxLayer
           offset={13}
-          speed={-1}
+          speed={0}
           style={{
             backgroundImage: `url(${tiaolou})`,
             backgroundSize: '70rem',
